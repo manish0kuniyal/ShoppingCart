@@ -4,7 +4,7 @@ import { GetData } from '../../utils/request'
 import SortedPage from './components/sortedPage'
 import Cart from './cart/page'
 import { Context } from './context/store'
-import InfoIcon from '@mui/icons-material/Info';
+// import InfoIcon from '@mui/icons-material/Info';
 
 function Page() {
 
@@ -71,7 +71,7 @@ function Page() {
         <div
         onMouseEnter={()=>setToolTipVisible(true)}   
         onMouseLeave={()=>setToolTipVisible(false)}>
-        <h1 title='hello' className='relative  m-3'><InfoIcon/></h1>
+        <h1 title='hello' className='relative  m-3  w-[30px] h-[30px] rounded-[50%] bg-black text-center pt-[2px] text-white'>i</h1>
         {toolTipVisible && <h2 className='text-white bg-black z-3 absolute rounded-[10px]  p-2 lg:text-[1rem] text-[.7rem]'>Welcome to nexshop!</h2> }
         </div>
         <div>
