@@ -41,6 +41,7 @@ const Cart = () => {
           <div key={item.id} className=' m-2 flex items-center justify-evenly  h-[60%] p-2'>
             <div className='rounded-[15px] py-4 bg-white w-[50%] flex flex-col items-center '>
             <Image
+            alt='image' 
             width={1500}
             height={1500}
             src={item.image} className='w-[80%] lg:w-[20%] mx-auto' />

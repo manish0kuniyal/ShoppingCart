@@ -9,9 +9,6 @@ function GLobalState({children}){
     function handleAddToCart(value){
         setCartItems(prevCartItems=>[...prevCartItems,value])
     }
-    useEffect(()=>{
-        console.log(cartItems)
-    },[])
 
 return(
  <Context.Provider value={{cartItems,setCartItems,handleAddToCart}}>
