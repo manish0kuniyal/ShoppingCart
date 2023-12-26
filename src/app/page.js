@@ -5,6 +5,7 @@ import SortedPage from './components/sortedPage'
 import Cart from './cart/page'
 import { Context } from './context/store'
 // import InfoIcon from '@mui/icons-material/Info';
+import Image from 'next/image'
 
 function Page() {
 
@@ -35,7 +36,7 @@ function Page() {
       {data.map((item) => (
         <div key={item.id} className='border-2 m-4'>
           <h1>{item.title}</h1>
-          <img className='w-[100px]' src={item.image} alt={item.title}></img>
+          <Image className='w-[100px]' src={item.image} alt={item.title}        width={220} height={330}></Image>
           <h2>${item.price}</h2>
           <button className='border-2 m-2 p-1'
           onClick={()=>handleAddToCart(item)}
@@ -51,7 +52,9 @@ function Page() {
         <div className='flex flex-wrap justify-evenly items-center text-center'>
           {data.map((item) => (
             <div key={item.id} className=' bg-white rounded-[12px] py-6 w-[40%]  p-2 flex flex-col m-4 '>
-              <img className='w-[80%] lg:w-[30%] mx-auto' src={item.image} alt={item.title}></img>          
+              <Image className='w-[80%] lg:w-[30%] mx-auto' src={item.image} alt={item.title}
+                      width={220} height={330}
+              ></Image>          
               <h1 className='font-bold my-2 h-[45px] overflow-hidden'>{item.title}</h1>
               <h2>${item.price}</h2>
               <button className='mx-auto mt-2 bg-black text-white max-w-[200px] p-1 px-4 rounded-[10px] text-sm py-2 font-mono font-bold'

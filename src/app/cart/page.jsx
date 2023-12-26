@@ -1,7 +1,7 @@
 "use client"
 import React, { useContext } from 'react'
 import { Context } from '../context/store'
-
+import Image from 'next/image'
 const Cart = () => {
   const { cartItems, setCartItems, handleAddToCart } = useContext(Context)
 
@@ -40,7 +40,10 @@ const Cart = () => {
         return (
           <div key={item.id} className=' m-2 flex items-center justify-evenly  h-[60%] p-2'>
             <div className='rounded-[15px] py-4 bg-white w-[50%] flex flex-col items-center '>
-            <img src={item.image} className='w-[80%] lg:w-[20%] mx-auto' />
+            <Image
+            width={1500}
+            height={1500}
+            src={item.image} className='w-[80%] lg:w-[20%] mx-auto' />
             <div className='my-2'>
             <button className='bg-black text-white rounded-[10px] p-1 px-4 ' onClick={() => increaseFrequency(item.id)}>+</button>
             <span className=' font-bold  p-1 px-4'>{`${itemFrequency[item.id]}`}</span>
