@@ -83,8 +83,8 @@ function Page() {
             onChange={(event) => setSortedValue(event.target.value)}
           >
             <option value={'all'}>sort by</option>
-            <option value={"men's clothing"}>men's clothing</option>
-            <option value={"women's clothing"}>women's clothing</option>
+            <option value={"men's clothing"}>men&apos;s clothing</option>
+            <option value={"women's clothing"}>women&apos;s clothing</option>
             <option value='electronics'>electronics</option>
             <option value='jewelery'>jewelery</option>
           </select>
